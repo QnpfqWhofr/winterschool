@@ -1,10 +1,11 @@
 import './App.css'
 import Resigter from './components/Register';
+import HookExam from './components/HookExam';
 
 function App() {
   return (
     <>
-      <Resigter />
+      <HookExam />
     </>
   );
 }
