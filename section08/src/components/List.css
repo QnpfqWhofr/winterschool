@@ -4,6 +4,14 @@
   gap: 20px;
 }
 
+.list {
+  display: flex;
+  gap: 60%;
+}
+
+.list > h5 {
+}
+
 .List > input {
   width: 100%;
   border: none;

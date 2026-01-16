@@ -16,10 +16,17 @@ const List = ({todos, onUpdate,onDelete}) => {
         return todos.filter((todo)=>todo.content.toLowerCase().includes(search.toLowerCase()))
     };
 
+    const getfinishedData = () => {
+        return todos.filter((todofinished)=>!todofinished.isDone)
+    }
+
     const filteredTodos = getFilteredData();
 
     return <div className="List">
-        <h4>Todo List 🌱</h4>
+        <div className="list">
+            <h4>Todo List 🌱</h4>
+            <h5>{getfinishedData().length}개 남음</h5>
+        </div>
         <input value={search} onChange={onChangeSearch} placeholder="검색어를 입력하세요" />
         <div className="todos_wrapper">
             {filteredTodos.map((todo)=> {
